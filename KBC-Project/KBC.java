@@ -143,28 +143,34 @@ public class KBC extends KBC_Process implements ActionListener
 	public void actionPerformed(ActionEvent e) 
 	{
 		String opt;
-		if(e.getSource()==this.conf)
+		if(e.getSource()==conf)
 		{
-			if(this.c1.isSelected())
+			if(c1.isSelected())
 			{
 				opt=c1.getText();
 			}
-			else if(this.c2.isSelected())
+			else if(c2.isSelected())
 			{
 				opt=c2.getText();
 			}
-			else if(this.c3.isSelected())
+			else if(c3.isSelected())
 			{
 				opt=c3.getText();
 			}
-			else
+			else if(c4.isSelected())
 			{
 				opt=c4.getText();
 			}
-			
-			if(opt.equalsIgnoreCase(this.cans))
+			else
 			{
-				if(this.quesno==10)
+				return;
+			}
+			
+			bg.clearSelection();
+			
+			if(opt.equalsIgnoreCase(cans))
+			{
+				if(quesno==10)
 				{
 					dispWinMessage();
 				}
@@ -172,15 +178,15 @@ public class KBC extends KBC_Process implements ActionListener
 				{
 					if(quesno<=5)
 					{
-						this.cash=this.cash+this.currques;
-						this.currques+=5000;
-						this.total=this.cash+this.currques;
+						cash=cash+currques;
+						currques+=5000;
+						total=cash+currques;
 					}
 					else
 					{
-						this.cash=this.cash+this.currques;
-						this.currques+=10000;
-						this.total=this.cash+this.currques;
+						cash=cash+currques;
+						currques+=10000;
+						total=cash+currques;
 					}
 					try 
 					{
