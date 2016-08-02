@@ -51,14 +51,31 @@ public class KBC extends KBC_Process implements ActionListener
 		this.p1.setLayout(new FlowLayout());
 		this.p1.setSize(600,300);
 		this.p2.setLayout(new FlowLayout());
-		this.p1.setBackground(Color.LIGHT_GRAY);
-		this.p3.setBackground(Color.BLUE);
-		this.p4.setBackground(Color.gray);
+		this.p1.setBackground(new Color(64,64,64));
+		this.p2.setBackground(new Color(100,100,100));
+		this.p3.setBackground(Color.BLACK);
+		this.p4.setBackground(new Color(64,64,64) );
+		this.p5.setBackground(new Color(64,64,64));
 		this.p5.setLayout(new GridBagLayout());
 		GridBagConstraints sjk=new GridBagConstraints();
 		
 		conf.addActionListener(this);
 		
+		question.setForeground(Color.WHITE);
+		currcash.setForeground(Color.WHITE);
+		totalCash.setForeground(Color.WHITE);
+		thisques.setForeground(Color.WHITE);
+		saperator.setForeground(Color.WHITE);
+		conf.setBackground(Color.WHITE);
+		
+		c1.setBackground(new Color(100,100,100));
+		c1.setForeground(Color.WHITE);
+		c2.setBackground(new Color(100,100,100));
+		c2.setForeground(Color.WHITE);
+		c3.setBackground(new Color(100,100,100));
+		c3.setForeground(Color.WHITE);
+		c4.setBackground(new Color(100,100,100));
+		c4.setForeground(Color.WHITE);
 		
 		bg.add(c1);
 		bg.add(c2);
